@@ -39,6 +39,23 @@ console.log("MongoDB connection success !");
 
 const productRouter = require("./routes/products.route.js"); 
 app.use("/product",productRouter);
+app.use('/user', require('./routes/user.route'))
+app.use('/api', require('./routes/upload.route'))
+
+const reportRouter = require("./routes/reports.route.js");
+app.use("/report",reportRouter);
+
+//order
+const orderRouter = require("./routes/orders.route.js");
+const requestRouter = require("./routes/requests.route.js");
+app.use("/order",orderRouter);
+app.use("/request",requestRouter);
+//payment
+const paymentRouter = require("./routes/payments.route.js");
+app.use("/payment",paymentRouter);
+//cart
+const cartRouter = require("./routes/carts.route.js");
+app.use("/cart",cartRouter);
 
 // set up EJS
 app.use(bodyParser.urlencoded({ extended: false }))
@@ -52,7 +69,7 @@ app.use('./Products/uploads', express.static('uploads'));
 
 
 app.listen(PORT, ()=>{ 
-    console.log('Server sstarted on port: ${PORT}')
+    console.log('Server started on port: ${PORT}')
 })
 
 
