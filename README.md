@@ -41,10 +41,6 @@ To run this project locally, follow these steps:
 
 Contributions are welcome! If you want to contribute to this project, feel free to open issues or submit pull requests.
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
 ## Acknowledgments
 
 - Thanks to the MERN Stack for providing a robust set of technologies to build this project.
